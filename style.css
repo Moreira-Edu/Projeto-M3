@@ -1,0 +1,92 @@
+
+@font-face {
+    font-family: 'got';
+    src: url('img/got.ttf');
+}
+
+body{
+  background-color: #09041a;
+  background-image: url('img/wallpaperok.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+  
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.opcoesNav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'got', Times, serif;
+  align-items: flex-end;
+}
+
+.opcoesNav img{
+  width: 100px;
+  /* filter: invert(47%)saturate(76%) hue-rotate(158deg) brightness(208%) contrast(190%); */
+  filter: invert(77%)saturate(26%) hue-rotate(158deg) brightness(208%) contrast(190%);
+
+}
+
+header a{
+  padding-right: 1em;
+  text-decoration-line: none;
+  color: #fff;
+  transition: 0.9s ease-in-out;
+}
+
+header a:hover{
+  cursor: pointer;
+  filter: invert(77%)saturate(26%) hue-rotate(158deg) brightness(208%) contrast(190%);
+}
+
+.equipe{
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.logo{
+  width: 150px;
+  filter: invert(22%)saturate(26%) hue-rotate(78deg) brightness(58%) contrast(19%); 
+}
+
+
+main{
+  font-family: 'got', Times, serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  height: 28em;
+  line-height: 120px;
+}
+
+main h1{
+  font-size: 4rem;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
+
+main button{
+  color: white;
+  text-decoration: none;
+  font-size: 200%;
+  font-family: 'Times New Roman', Times, serif;
+  background-image: linear-gradient(to right, #010102 0%, hsl(34, 74%, 40%)  31%, #000000  100%);
+  padding: 12px 20px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 18px 0 18px 0;
+  cursor: pointer;
+}
