@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'got';
+    src: url('img/got.ttf');
+}
+
+body{
+    background-image: url('img/houses.png');
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+    
+  @media(max-width: 1200px){
+      body{
+        background: #edeef0;
+        background: linear-gradient(to bottom, #000000, #5c5c5b);
+
+      }
+  }
+  header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  header a{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-right: 1em;
+    text-decoration-line: none;
+    color: #fff;
+    transition: 0.9s ease-in-out;
+    text-align: center;
+    font-family: 'got', 'Times New Roman', Times, serif;
+    line-height: 40px;
+    transition: ease-in-out 0.8s;
+  }
+
+  header h2{
+      padding-bottom: 30px;
+      padding-right: 10px;
+  }
+
+  header a:hover{
+      transform: scale(1.1);
+  }
+  
+ 
+  .logo{
+    width: 150px;
+    filter: invert(102%)saturate(100%) hue-rotate(18deg) brightness(180%) contrast(190%); 
+    filter: drop-shadow(2px 4px 8px rgb(241, 235, 235));
+}
+
+.equipe{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+@media(max-width: 1200px){
+    .equipe{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 5%;
+    }
+}
+
+.equipe div{
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'got';
+}
+
+.equipe img{
+    width: 200px;
+}
