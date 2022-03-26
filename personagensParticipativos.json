@@ -1,0 +1,18 @@
+{
+  "cols": [
+    { "id": "A", "label": "Personagens", "type": "string" },
+    { "id": "B", "label": "Episódios", "type": "number", "pattern": "General" }
+  ],
+  "rows": [
+    { "c": [{ "v": "Tyrion Lannister" }, { "v": 67, "f": "67" }] },
+    { "c": [{ "v": "Cersei Lannister" }, { "v": 62, "f": "62" }] },
+    { "c": [{ "v": "Daenerys Targaryen" }, { "v": 62, "f": "62" }] },
+    { "c": [{ "v": "Jon Snow" }, { "v": 62, "f": "62" }] },
+    { "c": [{ "v": "Sansa Stark" }, { "v": 59, "f": "59" }] },
+    { "c": [{ "v": "Arya Stark" }, { "v": 59, "f": "59" }] },
+    { "c": [{ "v": "Jaime Lannister" }, { "v": 55, "f": "55" }] },
+    { "c": [{ "v": "Jorah Mormont" }, { "v": 52, "f": "52" }] },
+    { "c": [{ "v": "Samwell Tarly" }, { "v": 48, "f": "48" }] },
+    { "c": [{ "v": "Theon Greyjoy" }, { "v": 47, "f": "47" }] }
+  ]
+}

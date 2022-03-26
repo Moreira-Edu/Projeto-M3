@@ -1,0 +1,75 @@
+{
+  "cols": [
+    { "id": "A", "label": "Casa", "type": "string" },
+    {
+      "id": "B",
+      "label": "Assassinatos",
+      "type": "number",
+      "pattern": "General"
+    },
+    { "type": "string", "role": "style", "p": { "role": "style" } },
+    { "type": "string", "role": "tooltip", "p": { "html": true } }
+  ],
+  "rows": [
+    {
+      "c": [
+        { "v": "House Targaryen" },
+        { "v": 1148, "f": "1148" },
+        { "v": "#750103" }
+      ]
+    },
+    {
+      "c": [
+        { "v": "House Lannister" },
+        { "v": 296, "f": "296" },
+        { "v": "#D8313D" }
+      ]
+    },
+    {
+      "c": [
+        { "v": "House Stark" },
+        { "v": 184, "f": "184" },
+        { "v": "#898989" }
+      ]
+    },
+    {
+      "c": [
+        { "v": "White Walkers" },
+        { "v": 79, "f": "79" },
+        { "v": "#42677B" }
+      ]
+    },
+    {
+      "c": [{ "v": "House Bolton" }, { "v": 76, "f": "76" }, { "v": "#AB0100" }]
+    },
+    {
+      "c": [
+        { "v": "Night's Watch" },
+        { "v": 69, "f": "69" },
+        { "v": "#7F7F7F" }
+      ]
+    },
+    { "c": [{ "v": "Free Folk" }, { "v": 62, "f": "62" }, { "v": "" }] },
+    {
+      "c": [
+        { "v": "House Greyjoy" },
+        { "v": 44, "f": "44" },
+        { "v": "#051D17" }
+      ]
+    },
+    {
+      "c": [
+        { "v": "Sons of the Harpy" },
+        { "v": 38, "f": "38" },
+        { "v": "#7C6C42" }
+      ]
+    },
+    {
+      "c": [
+        { "v": "House Baratheon of King's Landing" },
+        { "v": 34, "f": "34" },
+        { "v": "#F5D820" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "cols": [
+    { "id": "A", "label": "Casa", "type": "string" },
+    { "id": "B", "label": "mortes", "type": "number", "pattern": "General" },
+    { "type": "string", "role": "style", "p": { "role": "style" } },
+    { "type": "string", "role": "tooltip", "p": { "html": true } },
+    { "type": "string", "role": "annotation", "p": { "role": "annotation" } }
+  ],
+  "rows": [
+    {
+      "c": [
+        { "v": "House Lannister" },
+        { "v": 835, "f": "835" },
+        { "v": "#D8313D" }
+      ]
+    },
+    {
+      "c": [
+        { "v": "House Stark" },
+        { "v": 121, "f": "121" },
+        { "v": "#898989" }
+      ]
+    },
+    {
+      "c": [
+        { "v": "House Targaryen" },
+        { "v": 68, "f": "68" },
+        { "v": "#750103" }
+      ]
+    },
+    {
+      "c": [{ "v": "House Bolton" }, { "v": 68, "f": "68" }, { "v": "#AB0100" }]
+    },
+    {
+      "c": [
+        { "v": "House Baratheon of Dragonstone" },
+        { "v": 67, "f": "67" },
+        { "v": "#E9CD0E" }
+      ]
+    },
+    { "c": [{ "v": "House Frey" }, { "v": 62, "f": "62" }, { "v": "#BCBCBC" }] }
+  ]
+}
