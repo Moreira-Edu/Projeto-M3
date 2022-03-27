@@ -6,7 +6,7 @@ body{
   justify-content: space-between;
 }
 main{
-  margin-top: 1.5rem;
+  margin-top: 6rem;
 }
 header {
   display: flex;
@@ -14,7 +14,7 @@ header {
   align-items: center;
   padding: 15px;
 }
-
+/* 
 header a {
   display: flex;
   flex-direction: row-reverse;
@@ -27,7 +27,7 @@ header a {
   font-family: "got", "Times New Roman", Times, serif;
   line-height: 40px;
   transition: ease-in-out 0.8s;
-}
+} */
 
 header h2 {
   padding-bottom: 30px;
@@ -39,21 +39,22 @@ header a:hover {
 }
 
 .logo {
-  width: 150px;
+  width: 100px;
   filter: invert(102%) saturate(100%) hue-rotate(18deg) brightness(180%)
     contrast(190%);
   filter: drop-shadow(2px 4px 8px rgb(241, 235, 235));
 }
 
 .content  {
-  height: 750px;
+  height: 900px;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 46%;
   transform: translate(-50%, -50%);
+  margin-left: 20px;
 }
 .slide .conteudoGrafico{
     width: 100%;
@@ -66,10 +67,12 @@ header a:hover {
 
 .navigation {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
+  bottom: 10px;
+  left: 55%;
   transform: translate(-50%);
   display: flex;
+  align-items: flex-end;
+  /* margin-bottom: 30px; */
 }
 
 .bar {
@@ -107,8 +110,13 @@ input {
 }
 .slide .conteudoTextual{
   margin-bottom: 0.6rem;
-  width: 65%;
+  width: 56%;
 }
+
+.conteudoTextual{
+  margin-top: 155px;
+}
+
 #slide1:checked ~ .s1 {
   margin-left: 0;
 }

@@ -1,15 +1,22 @@
 @font-face {
     font-family: 'got';
-    src: url('/assets/img/got.ttf');
+    src: url('../img/got.ttf');
 }
 
 body{
-    background-image: url('/assets/img/houses.png');
+    background-image: url('../img/houses.png');
     background-size: cover;
+    height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
   }
     
+  @media(max-width: 1200px){
+      body{
+        background: #edeef0;
+        background: linear-gradient(to bottom, #000000, #5c5c5b);
+      }
+  }
   header{
     display: flex;
     justify-content: flex-end;
@@ -53,13 +60,33 @@ body{
     margin-top: 5%;
 }
 
+@media(max-width: 1200px){
+    .equipe{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 5%;
+    }
+}
+
 .equipe div{
     text-align: center;
-    color: #fff;
+    color: rgb(209, 209, 209);
     font-size: 1.2em;
     font-family: 'got';
 }
 
 .equipe img{
     width: 200px;
+}
+
+.equipe h2{
+    padding: 20px 0 5px 0;
+}
+
+.redes img{
+    width: 40px;
+    padding: 10px;
+    filter: invert(92%)saturate(96%) hue-rotate(18deg) brightness(198%) contrast(2%);
+
 }
