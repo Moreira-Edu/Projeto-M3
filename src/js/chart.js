@@ -5,15 +5,11 @@ google.charts.load("current", {
 
 function desenharPizza() {
   let dadosJson = $.ajax({
-    url: "../src/dados/mortesPorRegiao.json",
+    url: "/src/dados/mortesPorRegiao.json",
     dataType: "json",
     async: false,
   }).responseText;
   let tabela = new google.visualization.DataTable(dadosJson);
-
-  // var myView = data.toJSON()
-
-  // console.log(myView);
 
   let visualization = new google.visualization.PieChart(
     document.getElementById("grafico-pizza")
@@ -43,7 +39,7 @@ function desenharPizza() {
 
 function desenharBarra() {
   let dadosJson = $.ajax({
-    url: "../src/dados/mortesPorCasa.json",
+    url: "/src/dados/mortesPorCasa.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -143,7 +139,7 @@ function desenharBarra() {
 
 function desenharLinha() {
   let dadosJson = $.ajax({
-    url: "../src/dados/mortesPorTemporada.json",
+    url: "/src/dados/mortesPorTemporada.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -182,7 +178,7 @@ function desenharLinha() {
 
 function desenharColuna() {
   let dadosJson = $.ajax({
-    url: "../src/dados/casasAssassinas.json",
+    url: "/src/dados/casasAssassinas.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -313,7 +309,7 @@ function desenharColuna() {
 
 function desenharDonut() {
   let dadosJson = $.ajax({
-    url: "../src/dados/casaTraira.json",
+    url: "/src/dados/casaTraira.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -365,7 +361,7 @@ function desenharDonut() {
 
 function desenharColuna2() {
   let dadosJson = $.ajax({
-    url: "../src/dados/maioresAssassinos.json",
+    url: "/src/dados/maioresAssassinos.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -440,7 +436,7 @@ function desenharColuna2() {
 }
 function desenharBolha() {
   let dadosJson = $.ajax({
-    url: "../src/dados/popularidade.json",
+    url: "/src/dados/popularidade.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -482,7 +478,7 @@ function desenharBolha() {
 
 function desenharArea() {
   let dadosJson = $.ajax({
-    url: "../src/dados/CasasPorRegiao.json",
+    url: "/src/dados/CasasPorRegiao.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -519,7 +515,7 @@ function desenharArea() {
 
 function desenhar() {
   let dadosJson = $.ajax({
-    url: "../src/dados/personagensParticipativos.json",
+    url: "/src/dados/personagensParticipativos.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -551,7 +547,7 @@ function desenhar() {
 
 function desenharbarra3() {
   let dadosJson = $.ajax({
-    url: "../src/dados/metodosMaisUtilizados.json",
+    url: "/src/dados/metodosMaisUtilizados.json",
     dataType: "json",
     async: false,
   }).responseText;
