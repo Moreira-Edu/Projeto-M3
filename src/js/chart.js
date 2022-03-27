@@ -243,7 +243,11 @@ function desenharColuna() {
   tabela.setCell(
     3,
     3,
-    bandeira("../assets/img/unknown.png", "White Walkers", 79)
+    bandeira(
+      "https://static.wikia.nocookie.net/gameofthrones/images/0/07/Rei_da_Noite_%28Caminhante_Branco%29.PNG/revision/latest/scale-to-width-down/315?cb=20161226195857&path-prefix=pt-br",
+      "White Walkers",
+      79
+    )
   );
   tabela.setCell(
     4,
@@ -267,8 +271,8 @@ function desenharColuna() {
     6,
     3,
     bandeira(
-      "../assets/img/Personagens/Ygritte.jpg",
-      "Ygritte como representante",
+      "/assets/img/Personagens/Ygritte.jpg",
+      "Ygritte como free folk",
       69
     )
   );
