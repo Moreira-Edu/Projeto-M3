@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'got';
-    src: url('img/got.ttf');
+    src: url('/assets/img/got.ttf');
 }
 
 body{
-    background-image: url('img/houses.png');
+    background-image: url('/assets/img/houses.png');
     background-size: cover;
     overflow-y: hidden;
     overflow-x: hidden;
