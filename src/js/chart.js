@@ -243,7 +243,7 @@ function desenharColuna() {
   tabela.setCell(
     3,
     3,
-    bandeira("../assets/img/unknown.png", "White Walkers", 79)
+    bandeira("../../assets/img/unknown.png", "White Walkers", 79)
   );
   tabela.setCell(
     4,
