@@ -243,11 +243,7 @@ function desenharColuna() {
   tabela.setCell(
     3,
     3,
-    bandeira(
-      "https://static.wikia.nocookie.net/gameofthrones/images/0/07/Rei_da_Noite_%28Caminhante_Branco%29.PNG/revision/latest/scale-to-width-down/315?cb=20161226195857&path-prefix=pt-br",
-      "White Walkers",
-      79
-    )
+    bandeira("https://i.postimg.cc/hv2bR8FN/unknown.png", "White Walkers", 79)
   );
   tabela.setCell(
     4,
@@ -271,8 +267,8 @@ function desenharColuna() {
     6,
     3,
     bandeira(
-      "/assets/img/Personagens/Ygritte.jpg",
-      "Ygritte como free folk",
+      "https://i.postimg.cc/c4jw7Ld7/Ygritte.jpg",
+      "Ygritte como representante",
       69
     )
   );
@@ -401,52 +397,52 @@ function desenharColuna2() {
   tabela.setCell(
     0,
     3,
-    personagem("../assets/img/Personagens/Daenerys.jpg", "Daenerys Targaryen")
+    personagem("https://i.postimg.cc/YCzF5f1R/Daenerys.jpg", "Daenerys Targaryen")
   );
   tabela.setCell(
     1,
     3,
-    personagem("../assets/img/Personagens/Cersei.webp", "Cersei Lannister")
+    personagem("https://i.postimg.cc/tChn6tmb/Cersei.webp", "Cersei Lannister")
   );
   tabela.setCell(
     2,
     3,
-    personagem("../assets/img/Personagens/Arya.jpg", "Arya Stark")
+    personagem("https://i.postimg.cc/Y2Fvcz7F/Arya.jpg", "Arya Stark")
   );
   tabela.setCell(
     3,
     3,
-    personagem("../assets/img/Personagens/wight.jpg", "Wight")
+    personagem("https://i.postimg.cc/FRLH4NMv/wight.jpg", "Wight")
   );
   tabela.setCell(
     4,
     3,
-    personagem("../assets/img/Personagens/Tormund.jpg", "Tormund")
+    personagem("https://i.postimg.cc/vTwH8CyV/Tormund.jpg", "Tormund")
   );
   tabela.setCell(
     5,
     3,
-    personagem("../assets/img/Personagens/Ramsay.webp", "Ramsay Bolton")
+    personagem("https://i.postimg.cc/8zzkCh2t/Ramsay.webp", "Ramsay Bolton")
   );
   tabela.setCell(
     6,
     3,
-    personagem("../assets/img/Personagens/Brienne.jpg", "Brienne of Tarth")
+    personagem("https://i.postimg.cc/1twsdMF5/Brienne.jpg", "Brienne of Tarth")
   );
   tabela.setCell(
     7,
     3,
-    personagem("../assets/img/Personagens/Pyat.webp", "Pyat Pree")
+    personagem("https://i.postimg.cc/NjFYtQXn/Pyat.webp", "Pyat Pree")
   );
   tabela.setCell(
     8,
     3,
-    personagem("../assets/img/Personagens/Yara.webp", "Yara Greyjoy")
+    personagem("https://i.postimg.cc/x1Xr7tDD/Yara.webp", "Yara Greyjoy")
   );
   tabela.setCell(
     9,
     3,
-    personagem("../assets/img/Personagens/Stannis.jpeg", "Stannis Baratheon")
+    personagem("https://i.postimg.cc/0NST5jyV/Stannis.jpg", "Stannis Baratheon")
   );
 
   function personagem(url, personagem) {
