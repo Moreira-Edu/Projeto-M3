@@ -5,7 +5,7 @@ google.charts.load("current", {
 
 function desenharPizza() {
   let dadosJson = $.ajax({
-    url: "/src/dados/mortesPorRegiao.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/0400e511ffeff481c9678d69d8cc01e2/raw/b5e7696bec3c0384b58a1bfc03145c82a93268ef/mortesPorRegiao.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -39,7 +39,7 @@ function desenharPizza() {
 
 function desenharBarra() {
   let dadosJson = $.ajax({
-    url: "/src/dados/mortesPorCasa.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/3a924bc78b473cf1c095a011a1831408/raw/0b9a7f20c62bcfdf32feb2e1f45a34e73a7473f2/mortesPorCasa",
     dataType: "json",
     async: false,
   }).responseText;
@@ -139,7 +139,7 @@ function desenharBarra() {
 
 function desenharLinha() {
   let dadosJson = $.ajax({
-    url: "/src/dados/mortesPorTemporada.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/7db9f348263561277581f4e3b61a9c0a/raw/89843a1121d31a8aac6411841f00e74afa51580e/mortesPorTemporada",
     dataType: "json",
     async: false,
   }).responseText;
@@ -178,7 +178,7 @@ function desenharLinha() {
 
 function desenharColuna() {
   let dadosJson = $.ajax({
-    url: "/src/dados/casasAssassinas.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/072e7364e4b8e40eb130da0ad4209d93/raw/0db1c0a73ffa39269ce16f85d47f1c5bbb82a05d/casasAssassinas",
     dataType: "json",
     async: false,
   }).responseText;
@@ -240,7 +240,11 @@ function desenharColuna() {
       184
     )
   );
-  tabela.setCell(3, 3, bandeira("../assets/img/unknown.png", "White Walkers", 79));
+  tabela.setCell(
+    3,
+    3,
+    bandeira("../assets/img/unknown.png", "White Walkers", 79)
+  );
   tabela.setCell(
     4,
     3,
@@ -309,7 +313,7 @@ function desenharColuna() {
 
 function desenharDonut() {
   let dadosJson = $.ajax({
-    url: "/src/dados/casaTraira.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/4f0d763d307c8f883da1156c7766c534/raw/8610809034c3c878cfa500a46d32ba4ffdb898ad/casasTrairas",
     dataType: "json",
     async: false,
   }).responseText;
@@ -361,7 +365,7 @@ function desenharDonut() {
 
 function desenharColuna2() {
   let dadosJson = $.ajax({
-    url: "/src/dados/maioresAssassinos.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/266c4e0c9543bb438b889a44922a879d/raw/54a85a60d04c4855635b7eaa0ca04a06c7d6a576/maioresAssassinos",
     dataType: "json",
     async: false,
   }).responseText;
@@ -400,9 +404,21 @@ function desenharColuna2() {
     3,
     personagem("../assets/img/Personagens/Cersei.webp", "Cersei Lannister")
   );
-  tabela.setCell(2, 3, personagem("../assets/img/Personagens/Arya.jpg", "Arya Stark"));
-  tabela.setCell(3, 3, personagem("../assets/img/Personagens/wight.jpg", "Wight"));
-  tabela.setCell(4, 3, personagem("../assets/img/Personagens/Tormund.jpg", "Tormund"));
+  tabela.setCell(
+    2,
+    3,
+    personagem("../assets/img/Personagens/Arya.jpg", "Arya Stark")
+  );
+  tabela.setCell(
+    3,
+    3,
+    personagem("../assets/img/Personagens/wight.jpg", "Wight")
+  );
+  tabela.setCell(
+    4,
+    3,
+    personagem("../assets/img/Personagens/Tormund.jpg", "Tormund")
+  );
   tabela.setCell(
     5,
     3,
@@ -413,7 +429,11 @@ function desenharColuna2() {
     3,
     personagem("../assets/img/Personagens/Brienne.jpg", "Brienne of Tarth")
   );
-  tabela.setCell(7, 3, personagem("../assets/img/Personagens/Pyat.webp", "Pyat Pree"));
+  tabela.setCell(
+    7,
+    3,
+    personagem("../assets/img/Personagens/Pyat.webp", "Pyat Pree")
+  );
   tabela.setCell(
     8,
     3,
@@ -436,7 +456,7 @@ function desenharColuna2() {
 }
 function desenharBolha() {
   let dadosJson = $.ajax({
-    url: "/src/dados/popularidade.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/8baef37b22b651cd4949b605f61fccb0/raw/b29acf00ad01f8dfe234293634974227bd5e1af4/popularidade",
     dataType: "json",
     async: false,
   }).responseText;
@@ -452,10 +472,10 @@ function desenharBolha() {
       easing: "out",
     },
     colorAxis: {
-      legend:{position: 'none',color:'white', textStyle: 'white'},
+      legend: { position: "none", color: "white", textStyle: "white" },
       colors: ["red", "yellow", "green"],
       textStyle: { color: "white" },
-      d:{ stroke:{color:'#ffffff'}}
+      d: { stroke: { color: "#ffffff" } },
     },
     height: 600,
     width: 1200,
@@ -478,7 +498,7 @@ function desenharBolha() {
 
 function desenharArea() {
   let dadosJson = $.ajax({
-    url: "/src/dados/CasasPorRegiao.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/9945e924940f53b543abbdffc9e19f8e/raw/631dd1c64452ada8fb6ec91c7fec785d07e6a8d4/casasPorRegiao",
     dataType: "json",
     async: false,
   }).responseText;
@@ -515,7 +535,7 @@ function desenharArea() {
 
 function desenhar() {
   let dadosJson = $.ajax({
-    url: "/src/dados/personagensParticipativos.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/30b0dd38f754fd5ed4a6c9afcc42399a/raw/e8beac15e68595c325feb4147dfad9e4c7dd285d/personagensParticipativos",
     dataType: "json",
     async: false,
   }).responseText;
@@ -540,14 +560,14 @@ function desenhar() {
       gridlines: { color: "transparent" },
       textStyle: { color: "white" },
     },
-    legend: {textStyle:{color: 'white'}}
+    legend: { textStyle: { color: "white" } },
   };
   visualization.draw(tabela, options);
 }
 
 function desenharbarra3() {
   let dadosJson = $.ajax({
-    url: "/src/dados/metodosMaisUtilizados.json",
+    url: "https://gist.githubusercontent.com/Moreira-Edu/4c2722ce027560bb1208ff27a26de589/raw/86214cec60a02093ff28959f58406f941fedff85/metodosMaisUtilizados",
     dataType: "json",
     async: false,
   }).responseText;
