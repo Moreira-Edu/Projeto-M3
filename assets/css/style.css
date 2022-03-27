@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: 'got';
-    src: url('/assets/img/got.ttf');
+    src: url('assets/img/got.ttf');
 }
 
 body{
   background-color: #09041a;
-  background-image: url('/assets/img/wallpaperok.jpg');
+  background-image: url('assets/img/wallpaperok.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   overflow-y: hidden;
