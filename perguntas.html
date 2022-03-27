@@ -1,86 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="perguntas.css">
-</head>
-<body style="background-color: black; background-image: none;">
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/perguntas.css" />
+    <script src="src/js/chart.js" defer></script>
+    <script src="src/js/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+  </head>
+  <body style="background-color: black; background-image: none">
     <header>
-        <a href="index.html">
-          <img src="img/icon.svg" class="logo">
-          <h2>INICIO</h2>
-        </a>
+      <a href="index.html">
+        <img src="img/icon.svg" class="logo" />
+        <h2>INICIO</h2>
+      </a>
     </header>
     <main class="content">
-        <div class="slides">
-            <input type="radio" name="slide" id="slide1" checked>
-            <input type="radio" name="slide" id="slide2">
-            <input type="radio" name="slide" id="slide3">
-            <input type="radio" name="slide" id="slide4">
-            <input type="radio" name="slide" id="slide5">
-            <input type="radio" name="slide" id="slide6">
-            <input type="radio" name="slide" id="slide7">
-            <input type="radio" name="slide" id="slide8">
-            <input type="radio" name="slide" id="slide9">
-            <input type="radio" name="slide" id="slide10">
-    
-            <div class="slide s1">
-                <p>Quantas mortes por casa</p>
-                <img src="/img/1.jpg" alt="">
+      <div class="slides">
+        <input type="radio" name="slide" id="slide1" checked />
+        <input type="radio" name="slide" id="slide2" />
+        <input type="radio" name="slide" id="slide3" />
+        <input type="radio" name="slide" id="slide4" />
+        <input type="radio" name="slide" id="slide5" />
+        <input type="radio" name="slide" id="slide6" />
+        <input type="radio" name="slide" id="slide7" />
+        <input type="radio" name="slide" id="slide8" />
+        <input type="radio" name="slide" id="slide9" />
+        <input type="radio" name="slide" id="slide10" />
+
+        <div class="slide s1">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>Quantas mortes por casa</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória)de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
             </div>
-            <div class="slide">
-                <p>Quantas mortes por temporada/episodios</p>
-                <img src="/img/2.jpg" alt="">
-            </div>
-            <div class="slide">
-                <p>Qual casa teve mais mortes</p>
-                <img src="/img/3.jpg" alt="">
-            </div>
-            <div class="slide">
-                <p>Qual familia matou mais</p>
-                <img src="/img/4.jpg" alt="">
-            </div>
-            <div class="slide">
-                <p>Qual familia matou mais entre si/mais se matou</p>
-                <img src="/img/5.jpg" alt="">
-            </div>
-            <div class="slide">
-                <p>Quantas casas existem e qual são elas</p>
-                <img src="/img/5.jpg" alt="">
-            </div>
-            <div class="slide">
-                <p>Os personagens que mais mataram por casa</p>
-                <img src="/img/5.jpg" alt="">
-            </div>
-            <div class="slide">
-                <p>As temporadas mais populares de got</p>
-                <img src="/img/5.jpg" alt="">
-            </div>
-            <div class="slide">
-                <p>Quantidades de casa por região</p>
-                <img src="/img/5.jpg" alt="">
-            </div>
-            <div class="slide">
-                <p>Rank de personagens que mais participaram de episodios</p>
-                <img src="/img/5.jpg" alt="">
-            </div>
+            <div id="grafico-barra"></div>
+          </div>
         </div>
-        <div class="navigation">
-            <label class="bar" for="slide1"></label>
-            <label class="bar" for="slide2"></label>
-            <label class="bar" for="slide3"></label>
-            <label class="bar" for="slide4"></label>
-            <label class="bar" for="slide5"></label>
-            <label class="bar" for="slide6"></label>
-            <label class="bar" for="slide7"></label>
-            <label class="bar" for="slide8"></label>
-            <label class="bar" for="slide9"></label>
-            <label class="bar" for="slide10"></label>
+        <div class="slide">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>Quantas mortes por temporada</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória) de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
+            </div>
+            <div id="grafico-linha"></div>
+          </div>
         </div>
-    </main>   
-</body>
+        <div class="slide">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>Mortes por armas e métodos</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória) de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
+            </div>
+            <div id="grafico-barra3"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>Qual familia matou mais</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória) de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
+            </div>
+            <div id="grafico-coluna"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>Qual familia matou mais entre si/mais se matou</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória) de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
+            </div>
+            <div id="grafico-donut"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>Mortes Por Região</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória) de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
+            </div>
+            <div id="grafico-pizza"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>Os personagens que mais mataram por casa</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória) de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
+            </div>
+            <div id="grafico-coluna2"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>As temporadas mais populares de got</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória) de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
+            </div>
+            <div id="grafico-bolha"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>Quantidades de casa por região</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória) de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
+            </div>
+            <div id="grafico-area"></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="conteudoGrafico">
+            <div class="conteudoTextual">
+              <h2>Rank de personagens que mais participaram de episodios</h2>
+              <p>
+                Descrição da pergunta teste ou história com os dados para ver
+                como fica um texto extenso para caramba escrito por um
+                palestrinha com preguiça (aparamentemente contraditória) de
+                copiar e colar o ipsum - contraditória porque seria mais fácil
+                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+              </p>
+            </div>
+            <div id="grafico-teste"></div>
+          </div>
+        </div>
+      </div>
+      <div class="navigation">
+        <label class="bar" for="slide1" onclick="desenharBarra()"></label>
+        <label class="bar" for="slide2" onclick="desenharLinha()"></label>
+        <label class="bar" for="slide3" onclick="desenharbarra3()"></label>
+        <label class="bar" for="slide4" onclick="desenharColuna()"></label>
+        <label class="bar" for="slide5"></label>
+        <label class="bar" for="slide6"></label>
+        <label class="bar" for="slide7" onclick="desenharColuna2()"></label>
+        <label class="bar" for="slide8" onclick="desenharBolha()"></label>
+        <label class="bar" for="slide9" onclick="desenharArea()"></label>
+        <label class="bar" for="slide10" onclick="desenhar()"></label>
+      </div>
+    </main>
+  </body>
 </html>

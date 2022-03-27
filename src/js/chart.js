@@ -2,11 +2,10 @@ google.charts.load("current", {
   packages: ["corechart"],
   language: "pt",
 });
-let resposta1;
 
 function desenharPizza() {
   let dadosJson = $.ajax({
-    url: "mortesPorRegiao.json",
+    url: "../src/dados/mortesPorRegiao.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -21,19 +20,21 @@ function desenharPizza() {
   );
   google.visualization.events.addListener(visualization, "click", separar);
   let options = {
-    legend: "labeled",
+    backgroundColor: "black",
+    legend: { position: "labeled", textStyle: { color: "white" } },
     is3D: true,
-    width: 900,
     height: 600,
+    width: 1200,
   };
   function separar(event) {
     let n = event.targetID.split("").splice(6, 2).join("");
     options = Object.assign({
       slices: { [n]: { offset: 0.2 } },
-      legend: "labeled",
+      legend: { position: "labeled", textStyle: { color: "white" } },
       is3D: true,
-      width: 900,
       height: 600,
+      backgroundColor: "black",
+      width: 1200,
     });
     visualization.draw(tabela, options);
   }
@@ -42,7 +43,7 @@ function desenharPizza() {
 
 function desenharBarra() {
   let dadosJson = $.ajax({
-    url: "mortesPorCasa.json",
+    url: "../src/dados/mortesPorCasa.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -116,17 +117,23 @@ function desenharBarra() {
   }
 
   let options = {
+    backgroundColor: "black",
+    colors: ["red"],
     annotations: { alwaysOutside: true },
     tooltip: { isHtml: true },
-    width: 900,
-    height: 800,
+    height: 600,
+    width: 1200,
     animation: {
       startup: true,
       duration: 3000,
       easing: "out",
     },
-    vAxis: { minValue: 0, maxValue: 1000 },
-    hAxis: { gridlines: { color: "transparent" } },
+    vAxis: { minValue: 0, maxValue: 1000, textStyle: { color: "white" } },
+    hAxis: {
+      gridlines: { color: "transparent" },
+      baselineColor: "grey",
+      textStyle: { color: "white" },
+    },
     bar: { groupWidth: "65%" },
     legend: { position: "none" },
   };
@@ -136,7 +143,7 @@ function desenharBarra() {
 
 function desenharLinha() {
   let dadosJson = $.ajax({
-    url: "mortesPorTemporada.json",
+    url: "../src/dados/mortesPorTemporada.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -146,15 +153,26 @@ function desenharLinha() {
     document.getElementById("grafico-linha")
   );
   let options = {
+    backgroundColor: "black",
     animation: {
       startup: true,
       duration: 3000,
       easing: "out",
     },
-    vAxis: { minValue: 0, maxValue: 1000, gridlines: { color: "transparent" } },
-    hAxis: { minValue: 1, maxValue: 8, gridlines: { color: "transparent" } },
-    width: 900,
-    height: 700,
+    vAxis: {
+      minValue: 0,
+      maxValue: 1000,
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
+    hAxis: {
+      minValue: 1,
+      maxValue: 8,
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
+    height: 600,
+    width: 1200,
     curveType: "function",
     legend: { position: "top", textStyle: { fontSize: 16, bold: true } },
     tooltip: { trigger: "select" },
@@ -164,7 +182,7 @@ function desenharLinha() {
 
 function desenharColuna() {
   let dadosJson = $.ajax({
-    url: "casasAssassinas.json",
+    url: "../src/dados/casasAssassinas.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -173,18 +191,27 @@ function desenharColuna() {
     document.getElementById("grafico-coluna")
   );
   let options = {
+    backgroundColor: "black",
     tooltip: { isHtml: true },
-    width: 900,
-    height: 700,
+    height: 600,
+    width: 1200,
     animation: {
       startup: true,
       duration: 3500,
       easing: "out",
     },
-    vAxis: { minValue: 0, maxValue: 1000, gridlines: { color: "transparent" } },
-    hAxis: { gridlines: { color: "transparent" } },
+    vAxis: {
+      minValue: 0,
+      maxValue: 1000,
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
+    hAxis: {
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
     legend: {
-      position: "top",
+      position: "none",
       textStyle: { color: "black", fontSize: 16, bold: true },
     },
   };
@@ -217,7 +244,7 @@ function desenharColuna() {
       184
     )
   );
-  tabela.setCell(3, 3, bandeira("../img/unknown.png", "White Walkers", 79));
+  tabela.setCell(3, 3, bandeira("../assets/img/unknown.png", "White Walkers", 79));
   tabela.setCell(
     4,
     3,
@@ -233,6 +260,15 @@ function desenharColuna() {
     bandeira(
       "https://awoiaf.westeros.org/images/thumb/f/f3/Night%27s_Watch.svg/545px-Night%27s_Watch.svg.png",
       "Nigh Walkers",
+      69
+    )
+  );
+  tabela.setCell(
+    6,
+    3,
+    bandeira(
+      "../assets/img/Personagens/Ygritte.jpg",
+      "Ygritte como representante",
       69
     )
   );
@@ -277,7 +313,7 @@ function desenharColuna() {
 
 function desenharDonut() {
   let dadosJson = $.ajax({
-    url: "casaTraira.json",
+    url: "../src/dados/casaTraira.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -298,18 +334,22 @@ function desenharDonut() {
         4: { color: "#898989" },
         [n]: { offset: 0.2, color: "red" },
       },
-      legend: "labeled",
-      width: 900,
-      height: 700,
+      backgroundColor: "black",
+      legend: { position: "labeled", textStyle: { color: "white" } },
+      height: 600,
+      width: 1200,
       pieHole: 0.4,
+      hAxis: { textStyle: { color: "white" } },
+      vAxis: { textStyle: { color: "white" } },
     });
     visualization.draw(tabela, options);
   }
   let options = {
-    height: 700,
-    width: 900,
+    backgroundColor: "black",
+    height: 600,
+    width: 1200,
     pieHole: 0.4,
-    legend: "labeled",
+    legend: { position: "labeled", textStyle: { color: "white" } },
     slices: {
       0: { color: "#898989" },
       1: { color: "#898989" },
@@ -317,13 +357,15 @@ function desenharDonut() {
       3: { color: "#898989" },
       4: { color: "#898989" },
     },
+    hAxis: { textStyle: { color: "white" } },
+    vAxis: { textStyle: { color: "white" } },
   };
   visualization.draw(tabela, options);
 }
 
 function desenharColuna2() {
   let dadosJson = $.ajax({
-    url: "maioresAssassinos.json",
+    url: "../src/dados/maioresAssassinos.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -333,45 +375,58 @@ function desenharColuna2() {
   );
 
   let options = {
+    backgroundColor: "black",
+    animation: {
+      startup: true,
+      duration: 3500,
+      easing: "out",
+    },
+    legend: "none",
     tooltip: { isHtml: true },
     annotations: { alwaysOutside: true },
     height: 600,
-    width: 900,
-    vAxis: { minValue: 0, maxValue: 1000, gridlines: { color: "transparent" } },
+    width: 1200,
+    vAxis: {
+      minValue: 0,
+      maxValue: 1000,
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
+    hAxis: { textStyle: { color: "white" } },
   };
   tabela.setCell(
     0,
     3,
-    personagem("../img/Personagens/Daenerys.jpg", "Daenerys Targaryen")
+    personagem("../assets/img/Personagens/Daenerys.jpg", "Daenerys Targaryen")
   );
   tabela.setCell(
     1,
     3,
-    personagem("../img/Personagens/Cersei.webp", "Cersei Lannister")
+    personagem("../assets/img/Personagens/Cersei.webp", "Cersei Lannister")
   );
-  tabela.setCell(2, 3, personagem("../img/Personagens/Arya.jpg", "Arya Stark"));
-  tabela.setCell(3, 3, personagem("../img/Personagens/wight.jpg", "Wight"));
-  tabela.setCell(4, 3, personagem("../img/Personagens/Tormund.jpg", "Tormund"));
+  tabela.setCell(2, 3, personagem("../assets/img/Personagens/Arya.jpg", "Arya Stark"));
+  tabela.setCell(3, 3, personagem("../assets/img/Personagens/wight.jpg", "Wight"));
+  tabela.setCell(4, 3, personagem("../assets/img/Personagens/Tormund.jpg", "Tormund"));
   tabela.setCell(
     5,
     3,
-    personagem("../img/Personagens/Ramsay.webp", "Ramsay Bolton")
+    personagem("../assets/img/Personagens/Ramsay.webp", "Ramsay Bolton")
   );
   tabela.setCell(
     6,
     3,
-    personagem("../img/Personagens/Brienne.jpg", "Brienne of Tarth")
+    personagem("../assets/img/Personagens/Brienne.jpg", "Brienne of Tarth")
   );
-  tabela.setCell(7, 3, personagem("../img/Personagens/Pyat.webp", "Pyat Pree"));
+  tabela.setCell(7, 3, personagem("../assets/img/Personagens/Pyat.webp", "Pyat Pree"));
   tabela.setCell(
     8,
     3,
-    personagem("../img/Personagens/Yara.webp", "Yara Greyjoy")
+    personagem("../assets/img/Personagens/Yara.webp", "Yara Greyjoy")
   );
   tabela.setCell(
     9,
     3,
-    personagem("../img/Personagens/Stannis.jpeg", "Stannis Baratheon")
+    personagem("../assets/img/Personagens/Stannis.jpeg", "Stannis Baratheon")
   );
 
   function personagem(url, personagem) {
@@ -385,7 +440,7 @@ function desenharColuna2() {
 }
 function desenharBolha() {
   let dadosJson = $.ajax({
-    url: "popularidade.json",
+    url: "../src/dados/popularidade.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -394,28 +449,40 @@ function desenharBolha() {
     document.getElementById("grafico-bolha")
   );
   let options = {
+    backgroundColor: "black",
     animation: {
       startup: true,
-      duration: 3000,
+      duration: 4000,
       easing: "out",
     },
-    colorAxis: { colors: ["red", "yellow", "green"] },
-    height: 400,
-    
+    colorAxis: {
+      legend:{position: 'none',color:'white', textStyle: 'white'},
+      colors: ["red", "yellow", "green"],
+      textStyle: { color: "white" },
+      d:{ stroke:{color:'#ffffff'}}
+    },
+    height: 600,
+    width: 1200,
     bubble: { textStyle: { color: "transparent" } },
     vAxis: {
+      textStyle: { color: "white" },
       minValue: 0,
       maxValue: 1100000,
       gridlines: { color: "transparent" },
     },
-    hAxis: { minValue: 0, maxValue: 100, gridlines: { color: "transparent" } },
+    hAxis: {
+      minValue: 0,
+      maxValue: 100,
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
   };
   visualization.draw(tabela, options);
 }
 
-function desenharArea(){
+function desenharArea() {
   let dadosJson = $.ajax({
-    url: "CasasPorRegiao.json",
+    url: "../src/dados/CasasPorRegiao.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -425,12 +492,34 @@ function desenharArea(){
     document.getElementById("grafico-area")
   );
 
-  visualization.draw(tabela, {height: 400})
+  let options = {
+    backgroundColor: "black",
+    colors: ["#BCBCBC"],
+    height: 600,
+    width: 1200,
+    animation: {
+      startup: true,
+      duration: 4000,
+      easing: "out",
+    },
+    vAxis: {
+      minValue: 0,
+      maxValue: 75,
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
+    hAxis: {
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
+  };
+
+  visualization.draw(tabela, options);
 }
 
-function desenhar(){
+function desenhar() {
   let dadosJson = $.ajax({
-    url: "personagensParticipativos.json",
+    url: "../src/dados/personagensParticipativos.json",
     dataType: "json",
     async: false,
   }).responseText;
@@ -439,41 +528,56 @@ function desenhar(){
     document.getElementById("grafico-teste")
   );
 
-  let options ={
+  let options = {
+    backgroundColor: "black",
+    colors: ["green"],
+    animation: {
+      startup: true,
+      duration: 3000,
+      easing: "out",
+    },
     bar: { groupWidth: "65%" },
-    height: 500
-  }
-  visualization.draw(tabela,options );
+    height: 600,
+    width: 1200,
+    vAxis: { minValue: 0, maxValue: 80, textStyle: { color: "white" } },
+    hAxis: {
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
+    legend: {textStyle:{color: 'white'}}
+  };
+  visualization.draw(tabela, options);
 }
 
-function desenhargrafico() {
-  let resposta =
-    "https://docs.google.com/spreadsheets/d/1ijGXsR8sl4Hbrgv48HKNshRAhoUsQZ6GL8NxXWdgaE4/edit?usp=sharing";
-  let query = new google.visualization.Query(resposta);
+function desenharbarra3() {
+  let dadosJson = $.ajax({
+    url: "../src/dados/metodosMaisUtilizados.json",
+    dataType: "json",
+    async: false,
+  }).responseText;
+  let tabela = new google.visualization.DataTable(dadosJson);
+  let visualization = new google.visualization.BarChart(
+    document.getElementById("grafico-barra3")
+  );
 
-  query.send((response) => {
-    if (response.isError()) {
-      alert(
-        "Error in query: " +
-          response.getMessage() +
-          " " +
-          response.getDetailedMessage()
-      );
-      return;
-      }
-
-    var data = response.getDataTable();
-    let json = data.toJSON();
-    console.log(json);
-    var chart = new google.visualization.AreaChart(
-      document.getElementById("grafico")
-    );
-
-    let options = {
-      height: 400,
-    };
-    chart.draw(data, options);
-  });
+  let options = {
+    backgroundColor: "black",
+    colors: ["#750103"],
+    animation: {
+      startup: true,
+      duration: 3000,
+      easing: "out",
+    },
+    bar: { groupWidth: "75%" },
+    height: 600,
+    width: 1200,
+    vAxis: { minValue: 0, maxValue: 80, textStyle: { color: "white" } },
+    hAxis: {
+      gridlines: { color: "transparent" },
+      textStyle: { color: "white" },
+    },
+  };
+  visualization.draw(tabela, options);
 }
 
 google.charts.setOnLoadCallback(desenharPizza);
@@ -481,8 +585,8 @@ google.charts.setOnLoadCallback(desenharBarra);
 google.charts.setOnLoadCallback(desenharLinha);
 google.charts.setOnLoadCallback(desenharColuna);
 google.charts.setOnLoadCallback(desenharDonut);
-// google.charts.setOnLoadCallback(desenhargrafico);
 google.charts.setOnLoadCallback(desenharColuna2);
 google.charts.setOnLoadCallback(desenharBolha);
 google.charts.setOnLoadCallback(desenharArea);
 google.charts.setOnLoadCallback(desenhar);
+google.charts.setOnLoadCallback(desenharbarra3);
