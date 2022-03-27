@@ -1,23 +1,13 @@
+body{
+    background-image: linear-gradient(to right, #010102 0%, rgb(177, 112, 27) 31%, #000000 100%);
+}
+
 header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 15px;
 }
-
-
-/* header a {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    padding-right: 1em;
-    text-decoration-line: none;
-    color: #fff;
-    transition: 0.9s ease-in-out;
-    text-align: center;
-    line-height: 40px;
-    transition: ease-in-out 0.8s;
-} */
 
 header a:hover {
     transform: scale(1.1);
@@ -127,4 +117,11 @@ p {
     font-size: 1.5em;
     padding-bottom: 25px;
     padding-left: 3px;
+}
+
+@media (min-width: 1599px){ 
+    .content {
+        height: 720px;
+        width: 1235px;
+    }
 }

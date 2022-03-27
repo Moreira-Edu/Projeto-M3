@@ -72,11 +72,22 @@ body{
 
 .equipe div{
     text-align: center;
-    color: #fff;
+    color: rgb(209, 209, 209);
     font-size: 1.2em;
     font-family: 'got';
 }
 
 .equipe img{
     width: 200px;
+}
+
+.equipe h2{
+    padding: 20px 0 5px 0;
+}
+
+.redes img{
+    width: 40px;
+    padding: 10px;
+    filter: invert(92%)saturate(96%) hue-rotate(18deg) brightness(198%) contrast(2%);
+
 }
