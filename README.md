@@ -9,6 +9,7 @@
 - [x] Bootstrap5.
 - [x] JavaScript.
 - [x] Jquery.
+- [x] Google Charts.
 
 
 
@@ -16,43 +17,43 @@
   
   ## Mortes por casa
   
-    ![Mortes por casa]()
+    ![Mortes por casa](assets/img/querys/mortesPorCasa.PNG)
     
   ## Quantas mortes por temporada
   
-    ![Quantas mortes por temporada]()
+    ![Quantas mortes por temporada](assets/img/querys/mortesPorSeason.PNG)
     
   ## Mortes por armas e métodos
   
-    ![Mortes por armas e métodos]()
+    ![Mortes por armas e métodos](assets/img/querys/metodosMaisUtilizados.PNG)
   
   ## Qual familia matou mais
     
-    ![Qual familia matou mais]()
+    ![Qual familia matou mais](assets/img/querys/casasQuemaisMataram.PNG)
   
   ## Qual familia matou mais entre si/mais se matou
   
-    ![Qual familia matou mais entre si/mais se matou]()
+    ![Qual familia matou mais entre si/mais se matou](assets/img/querys/casaQueMaisMatouEntreSi.PNG)
     
   ## Mortes Por Região
   
-   ![Mortes Por Região]()
+   ![Mortes Por Região](assets/img/querys/MortesPorRegiao.PNG)
    
    ## Os personagens que mais mataram por casa
   
-   ![Os personagens que mais mataram por casa]()
+   ![Os personagens que mais mataram por casa](assets/img/querys/PersonagensMaisAssassinos.PNG)
    
    ## As temporadas mais populares de got
   
-   ![As temporadas mais populares de got]()
+   ![As temporadas mais populares de got](assets/img/querys/TemporadaMaisPopular.PNG)
    
     ## Quantidades de casa por região
   
-   ![Quantidades de casa por região]()
+   ![Quantidades de casa por região](assets/img/querys/QuantidadeDeCasaPorRegiao.PNG)
    
     ## Rank de personagens que mais participaram de episodios
   
-   ![Rank de personagens que mais participaram de episodios]()
+   ![Rank de personagens que mais participaram de episodios](assets/img/querys/RankDosPersonagensParticipativos.PNG)
 
 # Equipe:
  * [Edu Moreira](https://www.linkedin.com/in/edu-moreira-aa9304226/)
