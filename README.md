@@ -2,6 +2,8 @@
 
 <p>Projeto final do módulo 3 da formação em Desenvolvimento Web Full Stack da Resilia Educação.</p>
 
+Link para a página [aqui](https://moreira-edu.github.io/Projeto-M3/)
+
 # Tecnologias utilizadas:
 - [x] MYSQL.
 - [x] HTML5.
