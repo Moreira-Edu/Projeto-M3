@@ -2,6 +2,11 @@ google.charts.load("current", {
   packages: ["corechart"],
   language: "pt",
 });
+$(document).ready(mediaQ);
+window.addEventListener("resize", mediaQ);
+
+var altura;
+var largura;
 
 function desenharPizza() {
   let dadosJson = $.ajax({
@@ -19,8 +24,8 @@ function desenharPizza() {
     backgroundColor: "black",
     legend: { position: "labeled", textStyle: { color: "white" } },
     is3D: true,
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
   };
   function separar(event) {
     let n = event.targetID.split("").splice(6, 2).join("");
@@ -28,9 +33,9 @@ function desenharPizza() {
       slices: { [n]: { offset: 0.2 } },
       legend: { position: "labeled", textStyle: { color: "white" } },
       is3D: true,
-      height: 600,
+      height: [altura],
       backgroundColor: "black",
-      width: 1200,
+      width: [largura],
     });
     visualization.draw(tabela, options);
   }
@@ -117,8 +122,8 @@ function desenharBarra() {
     colors: ["red"],
     annotations: { alwaysOutside: true },
     tooltip: { isHtml: true },
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
     animation: {
       startup: true,
       duration: 3000,
@@ -167,8 +172,8 @@ function desenharLinha() {
       gridlines: { color: "transparent" },
       textStyle: { color: "white" },
     },
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
     curveType: "function",
     legend: { position: "top", textStyle: { fontSize: 16, bold: true } },
     tooltip: { trigger: "select" },
@@ -189,8 +194,8 @@ function desenharColuna() {
   let options = {
     backgroundColor: "black",
     tooltip: { isHtml: true },
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
     animation: {
       startup: true,
       duration: 3500,
@@ -336,8 +341,8 @@ function desenharDonut() {
       },
       backgroundColor: "black",
       legend: { position: "labeled", textStyle: { color: "white" } },
-      height: 600,
-      width: 1200,
+      height: [altura],
+      width: [largura],
       pieHole: 0.4,
       hAxis: { textStyle: { color: "white" } },
       vAxis: { textStyle: { color: "white" } },
@@ -346,8 +351,8 @@ function desenharDonut() {
   }
   let options = {
     backgroundColor: "black",
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
     pieHole: 0.4,
     legend: { position: "labeled", textStyle: { color: "white" } },
     slices: {
@@ -384,8 +389,8 @@ function desenharColuna2() {
     legend: "none",
     tooltip: { isHtml: true },
     annotations: { alwaysOutside: true },
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
     vAxis: {
       minValue: 0,
       maxValue: 1000,
@@ -397,7 +402,10 @@ function desenharColuna2() {
   tabela.setCell(
     0,
     3,
-    personagem("https://i.postimg.cc/YCzF5f1R/Daenerys.jpg", "Daenerys Targaryen")
+    personagem(
+      "https://i.postimg.cc/YCzF5f1R/Daenerys.jpg",
+      "Daenerys Targaryen"
+    )
   );
   tabela.setCell(
     1,
@@ -477,8 +485,8 @@ function desenharBolha() {
       textStyle: { color: "white" },
       d: { stroke: { color: "#ffffff" } },
     },
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
     bubble: { textStyle: { color: "transparent" } },
     vAxis: {
       textStyle: { color: "white" },
@@ -511,8 +519,8 @@ function desenharArea() {
   let options = {
     backgroundColor: "black",
     colors: ["#BCBCBC"],
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
     animation: {
       startup: true,
       duration: 4000,
@@ -553,8 +561,8 @@ function desenhar() {
       easing: "out",
     },
     bar: { groupWidth: "65%" },
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
     vAxis: { minValue: 0, maxValue: 80, textStyle: { color: "white" } },
     hAxis: {
       gridlines: { color: "transparent" },
@@ -585,8 +593,8 @@ function desenharbarra3() {
       easing: "out",
     },
     bar: { groupWidth: "75%" },
-    height: 600,
-    width: 1200,
+    height: [altura],
+    width: [largura],
     vAxis: { minValue: 0, maxValue: 80, textStyle: { color: "white" } },
     hAxis: {
       gridlines: { color: "transparent" },
@@ -595,14 +603,32 @@ function desenharbarra3() {
   };
   visualization.draw(tabela, options);
 }
-
-google.charts.setOnLoadCallback(desenharPizza);
-google.charts.setOnLoadCallback(desenharBarra);
-google.charts.setOnLoadCallback(desenharLinha);
-google.charts.setOnLoadCallback(desenharColuna);
-google.charts.setOnLoadCallback(desenharDonut);
-google.charts.setOnLoadCallback(desenharColuna2);
-google.charts.setOnLoadCallback(desenharBolha);
-google.charts.setOnLoadCallback(desenharArea);
-google.charts.setOnLoadCallback(desenhar);
-google.charts.setOnLoadCallback(desenharbarra3);
+function mediaQ() {
+  if (window.matchMedia("(min-width: 600px)").matches) {
+    google.charts.setOnLoadCallback(desenharPizza);
+    google.charts.setOnLoadCallback(desenharBarra);
+    google.charts.setOnLoadCallback(desenharLinha);
+    google.charts.setOnLoadCallback(desenharColuna);
+    google.charts.setOnLoadCallback(desenharDonut);
+    google.charts.setOnLoadCallback(desenharColuna2);
+    google.charts.setOnLoadCallback(desenharBolha);
+    google.charts.setOnLoadCallback(desenharArea);
+    google.charts.setOnLoadCallback(desenhar);
+    google.charts.setOnLoadCallback(desenharbarra3);
+    altura = 600;
+    largura = 1100;
+  } else {
+    google.charts.setOnLoadCallback(desenharPizza);
+    google.charts.setOnLoadCallback(desenharBarra);
+    google.charts.setOnLoadCallback(desenharLinha);
+    google.charts.setOnLoadCallback(desenharColuna);
+    google.charts.setOnLoadCallback(desenharDonut);
+    google.charts.setOnLoadCallback(desenharColuna2);
+    google.charts.setOnLoadCallback(desenharBolha);
+    google.charts.setOnLoadCallback(desenharArea);
+    google.charts.setOnLoadCallback(desenhar);
+    google.charts.setOnLoadCallback(desenharbarra3);
+    altura = 350;
+    largura = 350;
+  }
+}
