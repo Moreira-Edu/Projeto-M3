@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>G.O.T QUERY'S</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/perguntas.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="src/js/chart.js" defer></script>
     <script src="src/js/jquery-3.6.0.min.js"></script>
     <script
@@ -14,14 +16,18 @@
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
   </head>
-  <body style="background-color: black; background-image: none">
+  <body>
     <header>
       <a href="index.html">
         <img src="assets/img/icon.svg" class="logo" />
         <!-- <h2>INICIO</h2> -->
       </a>
+      <div class="titulo">
+        <h1>Perguntas baseadas no banco de dados de G.O.T.</h1>
+       </div>
     </header>
-    <main>
+    
+    <main class="slide-space">
       <section class="content">
       <div class="slides">
         <input type="radio" name="slide" id="slide1" checked />
@@ -38,13 +44,15 @@
         <div class="slide s1">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>Mortes por casa</h2>
+              <h2>1-Mortes por casa</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória)de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                Para quem é fã da série, ver essa pergunta e ter uma tabela dessas é puro ouro,rs.
+                Para quem não sabe, Got é uma Série que envolve muitas mortes e muitas delas imprevisiveis e não vai achando que o seu personagem preferido é importante e não vai morrer, não.
+                Nada disso, nessa série ninguém sai ileso das maos de David Benioff D.B Weiss e claro do escritor George R.R Martin.
+                No gráfico a baixo conseguimos ver qual casa/união que mais foi atingida em questão de sobrevivência até a ultima temporada da série.
+                Pra quem achava que os Starks tinham sofrido mais por causa da invasões ao seu reino, está bem enganado, os dois ultimos episodios da série foram bem decisivos para o resultado desse gráfico.
+                Dayneres não deixou barato para os Lannister, deixando a Familia no primeiro lugar do gráfico.
+                Segue a baixo o grafico do banco de dados de mortes da série indicando as 6 familias que mais tiveram mortes:  
               </p>
             </div>
             <div id="grafico-barra"></div>
@@ -53,13 +61,14 @@
         <div class="slide">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>Quantas mortes por temporada</h2>
+              <h2>2-Quantas mortes por temporada</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória) de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                2-” Meu Deus, será que é possível contar isso?” Pois bem, é possível!
+                A série do início ao fim nos mostrou que morrer não é lá um problema e talvez sim uma solução, dependendo do olho de quem vê ou mata, rs.
+                Ao longo das 8 temporadas, tiveram várias batalhas, rebeliões, revoltas, saque amentos e entre outras coisas que levaram a vida de muita gente, seja importante ou não no enredo da série.
+                Através do banco de dados de mortes da série, conseguimos ver a quantidade de mortes por temporada.
+                Olhando o Gráfico dá pra ter uma noção das temporadas que tiveram mais batalhas e entretenimento.
+                pela quantidade de mortes. Pra quem nunca viu, dá até curiosidade de ver pra entender o porquê de tanta morte, né? 
               </p>
             </div>
             <div id="grafico-linha"></div>
@@ -68,13 +77,11 @@
         <div class="slide">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>Mortes por armas e métodos</h2>
+              <h2>3-Mortes por tipos de armas e metodos</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória) de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                Se você viu Got, você deve saber que a maioria das famílias tem seus métodos e equipamentos diferentes ou característicos de combater seus inimigos.E com isso, conseguimos saber através do banco de dados, quais armas foram mais usadas ao decorrer da série.
+                Nota-se pelo Gráfico a baixo que o negócio é ter um Dragão e tacar fogo na galere?  Não, mas ajuda bastante, Rs.
+                Brincadeiras a parte, conseguimos ver que fora o fogo, existem diferentes meios de ataque por familia, região ou até mesmo cultura.Deixando claro a diversidade de armas e métodos de guerra mais usados na série. 
               </p>
             </div>
             <div id="grafico-barra3"></div>
@@ -83,13 +90,13 @@
         <div class="slide">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>Qual familia matou mais</h2>
+              <h2>4-Qual familia matou mais</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória) de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                E a pergunta que não quer calar, qual familia/ união matou mais ao decorrer das 8 temporadas?
+                Uns diriam que os Lannister foram os que mais mataram, ou bem, mandaram matar,rs.
+                Mas graças aos seus Dragões, sede de vingança e trono, Dayneres levou a família Targaryen ao topo dessa tabela nos dois últimos eps da série,
+                deixando os rugidos dos Lannister em segundo lugar com uma diferença gritante entre o primeiro e segundo lugar do gráfico. E não só deixaram eles em segundo,
+                como eles fizeram uma boa parte da quantidade de mortos pela Patroa Dayneres Targaryen, hehe. Confira nosso gráfico interativo abaixo:
               </p>
             </div>
             <div id="grafico-coluna"></div>
@@ -98,13 +105,11 @@
         <div class="slide">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>Qual familia matou mais entre si/mais se matou</h2>
+              <h2>5-Qual familia matou mais entre si/mais se matou</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória) de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                Na história de Game of trhones, para quem não sabe, tudo é possivel e quando a questão é vingança, ego ou justiça, até os entes queridos acabam correndo o risco de levar um flechada, uma facada ou até mesmo virar carvão.
+                E é com essa curiosidade que pesquisamos as 5 casas que mais mataram entre si, ou seja, qual familia matou mais seus parentes, de todos os niveis,  de pai, até um tio distante. Ou no caso, se não for familia e sim uma união, a regra é a mesma.
+                Sem dó, o importante é manter sua prória honra, seja lá o que honra significa para cada um deles. 
               </p>
             </div>
             <div id="grafico-donut"></div>
@@ -113,13 +118,12 @@
         <div class="slide">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>Mortes Por Região</h2>
+              <h2>6-Mortes Por Regiao</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória) de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                No gráfico a baixo podemos ver qual região teve mais mortos e nesse caso, é claro, King´s landig lidera o nosso top 5 com 61,1% dos mortos, por causa de nada mais nada menos que quem?
+                Adivinha! Dayneres Targaryen, de alguma forma, sempre presente nos graficos de mortes, louco, não é? Ou seria a familia louca?Talvez. Kings Landing era a região mas desejada pelas familias,
+                principalmente por ser o principal reino onde ficava o famoso trono de Ferro e a Familia real, que mandava na coisa toda.
+                A baixo nós temos um gráfico super interativo com porcentagem de mortes por região de Westeros  
               </p>
             </div>
             <div id="grafico-pizza"></div>
@@ -128,13 +132,9 @@
         <div class="slide">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>Os personagens que mais mataram por casa</h2>
+              <h2>7-Os personagens que mais mataram por casa</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória) de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                Essa pergunta é bem interessante em vários aspectos. Claro que depois do “ tá pegando fogo, bixoo” de Daynerys Targaryen, ela lidera a nossa tabela com mais de mil mortos no total. Seguida por Cersei Lannister, tendo um total de 199 mortos por ela (Ou mandados a morte por ela), e o mais curioso disso tudo, é que se vocês repararem na no quarto gráfico desse slide, a família Lannister tem um total de, 296 mortos por eles. Resumindo, uma boa parte foi a mando da “Rainha” dos 7 reinos. Seguida por Arya Stark, uma verdadeira cavaleira do norte com sede de vingança e justiça. Observe o gráfico a baixo e veja os maiores “assassinos” da de G.O.T. 
               </p>
             </div>
             <div id="grafico-coluna2"></div>
@@ -143,13 +143,9 @@
         <div class="slide">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>As temporadas mais populares de got</h2>
+              <h2>8-As temporadas mais populares de got</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória) de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                Nesse lindo gráfico a baixo, podemos ver as temporadas mais populares de G.O.T, com avaliação, votos, popularidade e engajamento de cada temporada. Pra quem já viu a série, já até imagina qual está em primeiro e qual está em último né? E provavelmente você está certo, confia. 
               </p>
             </div>
             <div id="grafico-bolha"></div>
@@ -158,13 +154,9 @@
         <div class="slide">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>Quantidades de casa por região</h2>
+              <h2>9-Quantidades de casa por regiao</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória) de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                Se você pesquisar “Westeros” ou “Essos” no google, você verá que no mapa existem várias casas em diferentes ou não regiões. No gráfico a baixo conseguimos ver quantas casas existem em cada região. Exemplo Quantas casas existem nas ilhas de ferro? E no Norte? Bateu aquela curiosidade? É só passar a seta no gráfico a baixo para ver as respostas. 
               </p>
             </div>
             <div id="grafico-area"></div>
@@ -173,13 +165,9 @@
         <div class="slide">
           <div class="conteudoGrafico">
             <div class="conteudoTextual">
-              <h2>Rank de personagens que mais participaram de episodios</h2>
+              <h2>10-Rank de personagens que mais participaram de episodios</h2>
               <p>
-                Descrição da pergunta teste ou história com os dados para ver
-                como fica um texto extenso para caramba escrito por um
-                palestrinha com preguiça (aparamentemente contraditória) de
-                copiar e colar o ipsum - contraditória porque seria mais fácil
-                copiar e colar o ipsum. Mas beleza, é o que tá tendo
+                E a nosso último e não menos importante gráfico vai para o Rank dos personagens que mais apareceram na série. De tanto vermos Dayneres ou sua Família no topo da lista em quase todos gráficos, a gente já imagina que lá vem a mãe dos Dragões de novo. Mas o que muita gente pode não ter percebido, o amiguinho Tyrion esteve na maioria das temporadas com a Dayneres e fora isso, o personagem foi muito importante e presente em vários outros cenários da série. Então a liderança desse gráfico vai para a mão do rei mais injustiçado de westeros, Tyrion Lannister. Seguido dela mesma, a Mamis dos Dragões mais brabos de Essos. Confira o Gráficos a baixo para ver outros personagens importantes que tiveram bastante participação na série 
               </p>
             </div>
             <div id="grafico-teste"></div>
@@ -200,5 +188,9 @@
       </div>
     </section>
     </main>
+     <footer>
+    <img src="assets/img/HeaderDivider.png" width="100%">
+    <h2>Equipe 5 | &copy Todos os direitos reservados 2022</h2>
+  </footer>
   </body>
 </html>
