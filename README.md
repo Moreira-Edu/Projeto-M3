@@ -19,43 +19,133 @@ Link para a página [aqui](https://moreira-edu.github.io/Projeto-M3/)
   
   ## Mortes por casa
   
-    ![Mortes por casa](assets/img/querys/mortesPorCasa.PNG)
+```mysql
+     SELECT
+    allegiance as Casa, COUNT(*) as mortes
+FROM
+    deaths
+WHERE
+    allegiance LIKE %house%
+GROUP BY allegiance
+ORDER BY COUNT (*) DESC;
+```
     
   ## Quantas mortes por temporada
   
-    ![Quantas mortes por temporada](assets/img/querys/mortesPorSeason.PNG)
+```mysql
+   SELECT
+    season as Temporada, COUNT (*) as Mortes
+FROM
+    deaths
+GROUP BY season
+ORDER BY season;
+```
     
   ## Mortes por armas e métodos
   
-    ![Mortes por armas e métodos](assets/img/querys/metodosMaisUtilizados.PNG)
+```mysql
+   SELECT
+    Method AS Método, COUNT (*) AS Vezes
+FROM
+    deaths
+GROUP BY method
+ORDER BY COUNT (*) DESC
+LIMIT 10;
+```
   
   ## Qual familia matou mais
     
-    ![Qual familia matou mais](assets/img/querys/casasQuemaisMataram.PNG)
+```mysql
+   SELECT
+    killers_house as Casa, COUNT(*) as Assassinatos
+FROM
+    deaths
+WHERE
+    killers_house <> 'none'
+GROUP BY killers_house
+ORDER BY count(*) desc
+limit 10;  
+```
   
   ## Qual familia matou mais entre si/mais se matou
   
-    ![Qual familia matou mais entre si/mais se matou](assets/img/querys/casaQueMaisMatouEntreSi.PNG)
+```mysql
+   SELECT
+    killers_house as Casa, COUNT(*) as Assassinatos
+FROM
+    deaths
+WHERE
+    killers_house <> 'none'
+GROUP BY killers_house
+ORDER BY count(*) desc
+limit 10;
+```
     
   ## Mortes Por Região
   
-   ![Mortes Por Região](assets/img/querys/MortesPorRegiao.PNG)
+   
+```mysql
+SELECT
+    location, COUNT(*) AS mortes
+FROM
+    deaths
+GROUP BY location
+ORDER BY COUNT(*) DESC;
+```
    
    ## Os personagens que mais mataram por casa
   
-   ![Os personagens que mais mataram por casa](assets/img/querys/PersonagensMaisAssassinos.PNG)
+```mysql
+   SELECT
+    killer as Personagem, assassinatos
+FROM
+    (SELECT
+         COUNT (*) AS assassinatos, killer, killers_house
+    FROM
+        deaths
+    GROUP BY killer
+    ORDER BY COUNT(*) DESC) melhores_de_sua_casa
+WHERE
+    killer NOT LIKE %soldier%
+        AND killer NOT LIKE '%brother%'
+        AND killer NOT LIKE '%agent%'
+        AND killer NOT LIKE '%man%"
+        AND killer NOT LIKE '%none%
+GROUP BY killers_house
+```
    
-   ## As temporadas mais populares de got
+## As temporadas mais populares de got
   
-   ![As temporadas mais populares de got](assets/img/querys/TemporadaMaisPopular.PNG)
+```mysql
+   SELECT
+Season as Temporada, FORMAT( sum(rating), 'N', en-us') as Score, SUM(votes) as Votos
+FROM
+episodes
+GROUP BY season;
+```
+
+## Quantidades de casa por região
+  
+```mysql
+   SELECT
+    region as Região, COUNT(*) as Casas
+FROM
+    houses
+GROUP BY region
+ORDER BY COUNT (*) DESC
+limit 10;
+```
    
-    ## Quantidades de casa por região
+## Rank de personagens que mais participaram de episodios
   
-   ![Quantidades de casa por região](assets/img/querys/QuantidadeDeCasaPorRegiao.PNG)
-   
-    ## Rank de personagens que mais participaram de episodios
-  
-   ![Rank de personagens que mais participaram de episodios](assets/img/querys/RankDosPersonagensParticipativos.PNG)
+```mysql
+   SELECT
+    `character` as Personagens, episodes_appeared as Episódios
+FROM
+    `characters`
+ORDER BY Episodes_appeared DESC
+limit 10;
+```
 
 # Equipe:
  * [Edu Moreira](https://www.linkedin.com/in/edu-moreira-aa9304226/)
