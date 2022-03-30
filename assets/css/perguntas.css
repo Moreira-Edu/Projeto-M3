@@ -1,18 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'got';
+  src: url('../img/got.ttf');
+} 
+html {
+  height: 100%;
+  min-height: 100%;
+}
 body{
-  height: 100vh;
+  background-image: url("../img/Design\ sem\ nome\ \(8\).png");
+  flex-direction: column;
+  min-height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  
+}
+.titulo{
+  font-size: 0rem;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 1);
+  display: flex;
+  text-align: center;
+  position:absolute;
+  top:23%;
+  right:8%;
+  border: hidden;
+  background-color: rgba(0, 0, 0, 0.493);
+  word-spacing: 10px;
+  padding-right: 1em;
+  text-decoration-line:overline underline;
+  color:#a89385;
+  transition: 0.9s ease-in-out;
+  font-family: "got", "Times New Roman", Times, serif;
+  box-shadow: 20px 25px 25px rgb(10, 10, 10);
+
+}
+.titulo h1{
+  font-size: 2rem;
 }
 main{
   margin-top: 6rem;
 }
 header {
+  background-image: url('../img/Design\ sem\ nome\ \(10\).png');
+  background-repeat: no-repeat;
+  height: 120vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 15px;
+  
 }
 /* 
 header a {
@@ -29,24 +69,23 @@ header a {
   transition: ease-in-out 0.8s;
 } */
 
-header h2 {
-  padding-bottom: 30px;
-  padding-right: 10px;
-}
 
+/* 
 header a:hover {
   transform: scale(1.1);
-}
+} */
 
 .logo {
   width: 100px;
-  filter: invert(102%) saturate(100%) hue-rotate(18deg) brightness(180%)
-    contrast(190%);
+  filter: invert(102%) saturate(100%) hue-rotate(18deg) brightness(180%) contrast(190%);
   filter: drop-shadow(2px 4px 8px rgb(241, 235, 235));
+  position:relative;
+  bottom:500px;
+  right:1770px;
 }
 
 .content  {
-  height: 900px;
+  height: 1050px;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -55,6 +94,9 @@ header a:hover {
   left: 46%;
   transform: translate(-50%, -50%);
   margin-left: 20px;
+  margin-top:22%;
+  
+  
 }
 .slide .conteudoGrafico{
     width: 100%;
@@ -63,6 +105,7 @@ header a:hover {
     justify-content: center;
     align-items: center;
     justify-items: center;
+    
 }
 
 .navigation {
@@ -72,17 +115,18 @@ header a:hover {
   transform: translate(-50%);
   display: flex;
   align-items: flex-end;
-  /* margin-bottom: 30px; */
+  
 }
 
 .bar {
   width: 70px;
   height: 17px;
-  border: 2px solid red;
+  border: 2px solid #8e5b2c;
   margin: 6px;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.4s;
+  
 }
 
 .bar:hover {
@@ -94,6 +138,7 @@ input {
 }
 
 .slides {
+ 
   display: flex;
   width: 1100%;
   height: 100%;
@@ -102,19 +147,27 @@ input {
 .slide {
   width: 10%;
   transition: 0.6s;
+  
 }
 
 .slide img {
+  
   width: 100%;
   height: 100%;
 }
 .slide .conteudoTextual{
   margin-bottom: 0.6rem;
   width: 56%;
+  text-align: center;
+  
 }
-
+h2{
+  font-family: 'got', Times, serif;
+}
 .conteudoTextual{
   margin-top: 155px;
+  font-family: 'Times New Roman', Times, serif;
+  color:#8e5b2c;
 }
 
 #slide1:checked ~ .s1 {
@@ -158,14 +211,16 @@ input {
 }
 
 .conteudoTextual h2{
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   border-bottom: 1rem;
+  
 }
 .conteudoTextual p {
   font-size: 1.2rem;
   color: #fff;
   border-bottom: 1rem;
+  margin-top:20px;
 }
 
 
@@ -173,7 +228,6 @@ input {
   background-color: black;
   width: 200px;
   height: 200px;
- 
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -216,4 +270,18 @@ input {
   width: 140px;
   height: 140px;
   border-radius: 35px;
+}
+footer{ /*rodapé da pegina */
+  color: #fff;
+  text-align: center;
+  margin-top: 220px;
+  
+}
+
+footer h2{ /*texto do rodapé da pegina */
+  padding: 40px 0;
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  
+
 }
