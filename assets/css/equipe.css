@@ -57,9 +57,29 @@ header a:hover {
 
 .equipe {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 5%;
+    width:98%;
+    margin: 0 auto;
 }
+.du{
+    margin-left: 50px; 
+}
+.fer{
+    margin-left: 20px; 
+  }
+.lu{
+    
+  }    
+.kaio{
+    
+  }
+
+.pat{
+    margin-right:40px;
+    
+  }
+
 
 @media(max-width: 1200px) {
     .equipe {
@@ -71,6 +91,7 @@ header a:hover {
 }
 
 .equipe div {
+    margin-top: 5%;
     text-align: center;
     color: rgb(209, 209, 209);
     font-size: 1.2em;
