@@ -59,6 +59,7 @@ body {
 }
 .main-container {
   background-image: url("../img/Design\ sem\ nome\ \(8\).png");
+  background-size: cover;
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
