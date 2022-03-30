@@ -85,7 +85,7 @@ header a:hover {
 }
 
 .content  {
-  height: 900px;
+  height: 1050px;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -94,7 +94,9 @@ header a:hover {
   left: 46%;
   transform: translate(-50%, -50%);
   margin-left: 20px;
-  margin-top:20%;
+  margin-top:22%;
+  
+  
 }
 .slide .conteudoGrafico{
     width: 100%;
@@ -119,7 +121,7 @@ header a:hover {
 .bar {
   width: 70px;
   height: 17px;
-  border: 2px solid red;
+  border: 2px solid #8e5b2c;
   margin: 6px;
   border-radius: 5px;
   cursor: pointer;
@@ -156,6 +158,7 @@ input {
 .slide .conteudoTextual{
   margin-bottom: 0.6rem;
   width: 56%;
+  text-align: center;
   
 }
 h2{
@@ -208,14 +211,16 @@ h2{
 }
 
 .conteudoTextual h2{
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   border-bottom: 1rem;
+  
 }
 .conteudoTextual p {
   font-size: 1.2rem;
   color: #fff;
   border-bottom: 1rem;
+  margin-top:20px;
 }
 
 
@@ -269,12 +274,14 @@ h2{
 footer{ /*rodapé da pegina */
   color: #fff;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 220px;
   
 }
 
 footer h2{ /*texto do rodapé da pegina */
   padding: 40px 0;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  
 
 }
