@@ -8,6 +8,8 @@ body { /*body, contendo o wallpaper de fundo*/
   background-image: url('../img/wallpaperok.jpg');
   background-size: contain;
   background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
   /* overflow-y: hidden;
   overflow-x: hidden; */
 }
@@ -58,7 +60,7 @@ header a:hover { /*detalhes hover barra de navegação */
 }
 
 
-section.principal { /*sessão principal, onde se encontra o titulo e botão database*/
+.principal { /*sessão principal, onde se encontra o titulo e botão database*/
   font-family: 'got', Times, serif;
   display: flex;
   flex-direction: column;
@@ -91,7 +93,7 @@ section.principal { /*sessão principal, onde se encontra o titulo e botão data
 }
 
 
-section.sobre{ /*sessão sobre a série */
+.sobre{ /*sessão sobre a série */
   color: #fff;
   width: 80%;
   text-align: center;
