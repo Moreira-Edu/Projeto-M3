@@ -20,25 +20,26 @@ body{
   
 }
 .titulo{
-  font-size: 2rem;
+  font-size: 0rem;
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 1);
   display: flex;
   text-align: center;
   position:absolute;
   top:23%;
+  right:8%;
   border: hidden;
   background-color: rgba(0, 0, 0, 0.493);
-  font-weight: uppercase;
   word-spacing: 10px;
-  
   padding-right: 1em;
   text-decoration-line:overline underline;
   color:#a89385;
   transition: 0.9s ease-in-out;
   font-family: "got", "Times New Roman", Times, serif;
   box-shadow: 20px 25px 25px rgb(10, 10, 10);
-  
 
+}
+.titulo h1{
+  font-size: 2rem;
 }
 main{
   margin-top: 6rem;
@@ -102,6 +103,7 @@ header a:hover {
     justify-content: center;
     align-items: center;
     justify-items: center;
+    
 }
 
 .navigation {
@@ -111,7 +113,7 @@ header a:hover {
   transform: translate(-50%);
   display: flex;
   align-items: flex-end;
-  /* margin-bottom: 30px; */
+  
 }
 
 .bar {
@@ -122,6 +124,7 @@ header a:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.4s;
+  
 }
 
 .bar:hover {
