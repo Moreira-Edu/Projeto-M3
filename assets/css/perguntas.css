@@ -3,7 +3,6 @@
   src: url("../img/got.ttf");
 }
 body {
-  background-image: url("../img/Design\ sem\ nome\ \(8\).png");
   min-height: 100%;
   height: 100vh;
   width: 100%;
@@ -21,12 +20,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px;
-  
 }
-.cabecalho a{
+.cabecalho a {
   padding: 10px 20px;
   display: flex;
-  height: 550px;
+  height: 460px;
 }
 
 .titulo {
@@ -34,47 +32,22 @@ body {
   background-color: transparent;
   display: flex;
   padding: 0 4rem;
-  /* text-align: start; */
-  /* height: 500px; */
-  /* position:absolute; */
-  /* top:23%;
-  right:8%; */
   border: hidden;
-  
+
   word-spacing: 10px;
-  /* padding-right: 1em; */
+
   text-decoration-line: overline underline;
   color: #a89385;
   transition: 0.9s ease-in-out;
   font-family: "got", "Times New Roman", Times, serif;
-  box-shadow: 20px 25px 25px rgb(10, 10, 10);
 }
 .titulo h1 {
+  box-shadow: 5px 25px 25px rgb(10, 10, 10);
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.548);
   background-color: rgba(0, 0, 0, 0.493);
   font-size: 2rem;
   margin: 0 3rem;
 }
-
-/* 
-header a {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  padding-right: 1em;
-  text-decoration-line: none;
-  color: #fff;
-  transition: 0.9s ease-in-out;
-  text-align: center;
-  font-family: "got", "Times New Roman", Times, serif;
-  line-height: 40px;
-  transition: ease-in-out 0.8s;
-} */
-
-/* 
-header a:hover {
-  transform: scale(1.1);
-} */
 
 .logo {
   align-self: flex-start;
@@ -83,12 +56,10 @@ header a:hover {
   filter: invert(102%) saturate(100%) hue-rotate(18deg) brightness(180%)
     contrast(190%);
   filter: drop-shadow(2px 4px 8px rgb(241, 235, 235));
-  /* position:relative; */
-  /* bottom: 500px;
-  right: 1770px; */
 }
 .main-container {
-  margin-top: 2rem;
+  background-image: url("../img/Design\ sem\ nome\ \(8\).png");
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,14 +71,10 @@ header a:hover {
   display: flex;
   justify-content: space-between;
   gap: 8rem;
-  width: 70%;
+  width: 65%;
   border-radius: 20px;
   overflow: hidden;
-  /* position: absolute; */
-  /* top: 50%;
-  left: 46%; */
-  /* transform: translate(-50%, -50%); */
-  /* margin-left: 20px; */
+
   box-sizing: inherit;
 }
 .grafico {
@@ -123,10 +90,8 @@ header a:hover {
 }
 
 .navigation {
-  /* position: absolute; */
   bottom: 10px;
   left: 55%;
-  /* transform: translate(-50%); */
   display: flex;
   align-items: flex-end;
 }
@@ -277,22 +242,18 @@ h2 {
   border-radius: 35px;
 }
 footer {
+  background-image: url("../img/Design\ sem\ nome\ \(8\).png");
 
   width: 100%;
-  padding: 1.1rem;
-  /*rodapé da pegina */
+  padding: 1.1rem 0.5rem;
   color: #fff;
   text-align: center;
-  /* position: absolute; */
   bottom: 0;
-  /* margin-top: 220px; */
 }
-footer img{
+footer img {
   margin-bottom: 1rem;
 }
 footer h2 {
-  /*texto do rodapé da pegina */
-  /* padding: 40px 0; */
   font-size: 1.5rem;
   font-family: "Times New Roman", Times, serif;
 }
